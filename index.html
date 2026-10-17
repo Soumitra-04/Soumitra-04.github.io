@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Soumitra Rajguru — AI/ML &amp; Software Engineering Portfolio</title>
+  <meta name="description" content="Portfolio of Soumitra Rajguru, Computer Engineering student at Vidyalankar Institute of Technology, Mumbai. I build intelligent systems — multi-agent research pipelines, LLM evaluation tools, and practical software.">
+  <meta name="author" content="Soumitra Rajguru">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Soumitra Rajguru — I build intelligent systems.">
+  <meta property="og:description" content="Computer Engineering student working on AI/ML, intelligent systems, software development, and research.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Soumitra Rajguru — I build intelligent systems.">
+  <meta name="twitter:description" content="Computer Engineering student working on AI/ML, intelligent systems, software development, and research.">
+  <meta name="twitter:image" content="assets/og-image.png">
+  <meta name="theme-color" content="#0a0b0f">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var saved = localStorage.getItem('sr-theme');
+        var preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', saved || preferred);
+      } catch (e) { /* storage unavailable — dark default stays */ }
+      window.setTimeout(function () {
+        if (window.__srPortfolioReady) return;
+        var items = document.querySelectorAll('.reveal');
+        for (var i = 0; i < items.length; i++) items[i].classList.add('is-visible');
+      }, 2500);
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Soumitra Rajguru",
+    "jobTitle": "Computer Engineering Student",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Vidyalankar Institute of Technology, Mumbai"
+    },
+    "sameAs": ["https://github.com/Soumitra-04"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ======================= HEADER / NAV ======================= -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Soumitra Rajguru — home">
+        <span class="brand-mark" aria-hidden="true">SR</span>
+        <span class="brand-name">Soumitra<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#research" class="nav-link">Research</a></li>
+          <li><a href="#github" class="nav-link">GitHub</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle theme">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ======================= HERO ======================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow">B.Tech Computer Engineering <span class="sep">/</span> VIT Mumbai</p>
+          <h1 class="hero-name" id="hero-title">Soumitra<br class="hero-break"> Rajguru</h1>
+          <p class="hero-headline">I build intelligent systems.</p>
+          <p class="hero-intro">
+            Computer Engineering student working across <strong>AI/ML</strong>, <strong>software engineering</strong>,
+            and <strong>research</strong> — designing multi-agent pipelines, auditing how models behave,
+            and shipping practical tools for real-world problems.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore Projects</a>
+            <a class="btn btn-ghost" href="https://github.com/Soumitra-04" target="_blank" rel="noopener noreferrer">
+              GitHub
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#contact">Contact Me</a>
+          </div>
+          <p class="hero-focus">
+            <span class="focus-dot" aria-hidden="true"></span>
+            Current focus: multi-agent systems, LLM evaluation &amp; applied research
+          </p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <svg class="hero-svg" viewBox="0 0 460 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="edgeFade" x1="0" y1="0" x2="460" y2="420" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--accent)" stop-opacity="0.7"/>
+                <stop offset="1" stop-color="var(--accent-2)" stop-opacity="0.35"/>
+              </linearGradient>
+            </defs>
+            <!-- edges -->
+            <g stroke="url(#edgeFade)" stroke-width="1.4">
+              <path d="M90 90 L230 60"/>
+              <path d="M90 90 L150 210"/>
+              <path d="M230 60 L360 120"/>
+              <path d="M150 210 L230 60"/>
+              <path d="M150 210 L300 260"/>
+              <path d="M360 120 L300 260"/>
+              <path d="M300 260 L390 340"/>
+              <path d="M150 210 L120 340"/>
+              <path d="M120 340 L300 260"/>
+              <path d="M360 120 L420 230"/>
+              <path d="M420 230 L390 340"/>
+            </g>
+            <!-- nodes -->
+            <g>
+              <circle cx="90" cy="90" r="7" fill="var(--accent)"/>
+              <circle cx="230" cy="60" r="5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2"/>
+              <circle cx="360" cy="120" r="8" fill="var(--accent-2)"/>
+              <circle cx="150" cy="210" r="5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2"/>
+              <circle cx="300" cy="260" r="7" fill="var(--accent)"/>
+              <circle cx="420" cy="230" r="4.5" fill="var(--bg)" stroke="var(--accent-2)" stroke-width="2"/>
+              <circle cx="120" cy="340" r="6" fill="var(--bg)" stroke="var(--accent)" stroke-width="2"/>
+              <circle cx="390" cy="340" r="7" fill="var(--accent-2)"/>
+            </g>
+            <!-- verification badge -->
+            <g transform="translate(346 300)">
+              <rect x="0" y="0" width="88" height="30" rx="8" fill="var(--surface)" stroke="var(--border-strong)"/>
+              <path d="M12 15.5 17 20.5 27 10.5" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <text x="35" y="19.5" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--text-muted)">verified</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ABOUT ======================= -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">01 / About</p>
+          <h2 class="section-title" id="about-title">Engineering first, research-minded.</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>
+              I'm Soumitra Rajguru, a Computer Engineering student at Vidyalankar Institute of Technology,
+              Mumbai. I like building software that does something concrete: research pipelines that
+              decompose a question into verifiable claims, advisory systems that keep an LLM on a short
+              leash, verification tools grounded in signal processing rather than marketing.
+            </p>
+            <p>
+              My work sits at the intersection of <strong>AI/ML</strong> and <strong>systems engineering</strong>.
+              I care about the parts around the model — validation, provenance, deterministic fallbacks,
+              evaluation methodology — because that's what turns a demo into something you can trust.
+              On the research side, I study how models behave under pressure, including sycophancy in
+              LLM responses.
+            </p>
+            <p>
+              Outside of projects, you'll find me in labs, hackathons, and documentation tabs —
+              currently maintaining a <strong>9.6+ CGPA</strong> while shipping side projects at a
+              steady clip.
+            </p>
+          </div>
+
+          <aside class="about-facts reveal" aria-label="Quick facts">
+            <dl class="facts-list">
+              <div class="fact">
+                <dt>Education</dt>
+                <dd>B.Tech Computer Engineering, VIT Mumbai</dd>
+              </div>
+              <div class="fact">
+                <dt>Academics</dt>
+                <dd>CGPA 9.6+</dd>
+              </div>
+              <div class="fact">
+                <dt>Focus</dt>
+                <dd>AI/ML · intelligent systems · software development · research</dd>
+              </div>
+              <div class="fact">
+                <dt>Based in</dt>
+                <dd>Mumbai, India</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FEATURED PROJECTS ======================= -->
+    <section class="section section-alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">02 / Featured Projects</p>
+          <h2 class="section-title" id="projects-title">Systems I've designed and shipped.</h2>
+          <p class="section-sub">Four flagship builds — a research pipeline, an evaluation study, a real-world advisory platform, and a verification tool.</p>
+        </header>
+
+        <div class="project-list">
+
+          <!-- Project 1: Veritas -->
+          <article class="project-card reveal" aria-labelledby="p-veritas-title">
+            <div class="project-visual" aria-hidden="true">
+              <svg viewBox="0 0 560 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-svg">
+                <g stroke="var(--border-strong)" stroke-width="1">
+                  <path d="M40 40 H520 M40 80 H520 M40 120 H520 M40 160 H520 M40 200 H520" opacity="0.35"/>
+                </g>
+                <g stroke="var(--accent)" stroke-width="1.6" fill="none">
+                  <path d="M80 120 C 150 120, 150 60, 220 60"/>
+                  <path d="M80 120 C 150 120, 150 180, 220 180"/>
+                  <path d="M220 60 C 300 60, 300 120, 380 120"/>
+                  <path d="M220 180 C 300 180, 300 120, 380 120"/>
+                  <path d="M380 120 H 470"/>
+                </g>
+                <g font-family="JetBrains Mono, monospace" font-size="11" fill="var(--text-muted)">
+                  <rect x="30" y="104" width="96" height="32" rx="8" fill="var(--surface-2)" stroke="var(--border-strong)"/>
+                  <text x="44" y="124">decompose</text>
+                  <rect x="176" y="44" width="96" height="32" rx="8" fill="var(--surface-2)" stroke="var(--border-strong)"/>
+                  <text x="196" y="64">gather</text>
+                  <rect x="176" y="164" width="96" height="32" rx="8" fill="var(--surface-2)" stroke="var(--border-strong)"/>
+                  <text x="190" y="184">prioritize</text>
+                  <rect x="332" y="104" width="96" height="32" rx="8" fill="var(--surface-2)" stroke="var(--accent)"/>
+                  <text x="349" y="124" fill="var(--accent)">verify</text>
+                  <circle cx="470" cy="120" r="14" fill="var(--surface-2)" stroke="var(--accent)" stroke-width="1.6"/>
+                  <path d="M464 120.5 468 124.5 476 115.5" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <g font-family="JetBrains Mono, monospace" font-size="10" fill="var(--text-faint)">
+                  <text x="410" y="150">cited synthesis</text>
+                  <text x="42" y="222">sqlite · provenance · risk gate</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="chip chip-accent">Research systems</span>
+                <span class="chip chip-muted">In active development</span>
+              </div>
+              <h3 class="project-title" id="p-veritas-title">Veritas <span class="project-subtitle">— Multi-Agent Research &amp; Verification System</span></h3>
+              <p class="project-desc">
+                An AI-driven multi-agent research system built around a database-backed pipeline:
+                task decomposition, source-prioritized evidence gathering, claim verification with explicit
+                verification states, contradiction analysis, and citation-backed synthesis. Engineering
+                highlights include a 10-step input-validation gate with prompt-injection detection,
+                language detection and composite risk scoring; a trained claim classifier
+                (TF-IDF + logistic regression with a rule-based engine) that decides claim type and
+                researchability before work enters the pipeline; and SQLite-tracked provenance —
+                source URL, domain and type — across tasks, sessions, verifications and contradictions.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>Python</li>
+                <li>SQLite</li>
+                <li>Pydantic</li>
+                <li>scikit-learn</li>
+                <li>loguru</li>
+                <li>langdetect</li>
+                <li>Research APIs</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-sm btn-primary" href="https://github.com/Soumitra-04/MultiAgent-Research-System" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+                <span class="chip chip-soft" title="No live deployment yet">No live demo</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: SycAudit -->
+          <article class="project-card reveal" aria-labelledby="p-sycaudit-title">
+            <div class="project-visual" aria-hidden="true">
+              <svg viewBox="0 0 560 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-svg">
+                <g stroke="var(--border-strong)" stroke-width="1">
+                  <path d="M60 40 V200 M60 200 H510"/>
+                  <path d="M60 160 H510" opacity="0.5"/>
+                  <path d="M60 120 H510" opacity="0.5"/>
+                  <path d="M60 80 H510" opacity="0.5"/>
+                </g>
+                <g font-family="JetBrains Mono, monospace" font-size="10" fill="var(--text-faint)">
+                  <text x="30" y="84">2</text><text x="30" y="124">1</text><text x="34" y="164">0</text>
+                </g>
+                <g>
+                  <rect x="100" y="130" width="52" height="70" rx="4" fill="var(--accent)" opacity="0.85"/>
+                  <rect x="186" y="96" width="52" height="104" rx="4" fill="var(--accent-2)" opacity="0.85"/>
+                  <rect x="272" y="146" width="52" height="54" rx="4" fill="var(--accent)" opacity="0.55"/>
+                  <rect x="358" y="112" width="52" height="88" rx="4" fill="var(--accent-2)" opacity="0.6"/>
+                  <rect x="444" y="158" width="52" height="42" rx="4" fill="var(--accent)" opacity="0.45"/>
+                </g>
+                <g font-family="JetBrains Mono, monospace" font-size="10" fill="var(--text-muted)" text-anchor="middle">
+                  <text x="126" y="218">F1</text><text x="212" y="218">F2</text><text x="298" y="218">F3</text><text x="384" y="218">F4</text><text x="470" y="218">F5</text>
+                </g>
+                <text x="60" y="28" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--text-faint)">facet scores · 0–2 rubric</text>
+              </svg>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="chip chip-accent">Research project</span>
+                <span class="chip chip-muted">Ongoing</span>
+              </div>
+              <h3 class="project-title" id="p-sycaudit-title">SycAudit</h3>
+              <p class="project-desc">
+                A research project auditing and evaluating sycophancy in AI systems. Responses are
+                generated across an N×M grid of prompt framings, annotated under a frozen five-facet
+                rubric — excessive agreement, flattery, avoidance of disagreement, preference alignment
+                and unnecessary validation — and scored by an in-house ML grader (MLP and XGBoost over
+                BGE/GTE sentence embeddings) trained on a leakage-checked annotated corpus with frozen
+                splits. A full-stack application (FastAPI + React + PostgreSQL) computes a per-response
+                WOBBLE score and surfaces the least-sycophantic answer alongside its facet breakdown.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>FastAPI</li>
+                <li>React</li>
+                <li>PostgreSQL</li>
+                <li>PyTorch</li>
+                <li>XGBoost</li>
+                <li>sentence-transformers</li>
+              </ul>
+              <div class="project-links">
+                <span class="chip chip-soft" title="Repository access is currently restricted">Private repository</span>
+                <span class="chip chip-soft" title="No public demo available">No live demo</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: VRIDDHI -->
+          <article class="project-card reveal" aria-labelledby="p-vriddhi-title">
+            <div class="project-visual" aria-hidden="true">
+              <svg viewBox="0 0 560 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-svg">
+                <g stroke="var(--border-strong)" stroke-width="1" opacity="0.6">
+                  <path d="M40 60 H520 M40 110 H520 M40 160 H520 M40 210 H520"/>
+                  <path d="M100 40 V220 M200 40 V220 M300 40 V220 M400 40 V220 M500 40 V220"/>
+                </g>
+                <g stroke="var(--accent-2)" stroke-width="1.6" fill="none">
+                  <path d="M70 190 C 130 190, 140 150, 190 148 C 250 146, 260 110, 320 104 C 380 98, 400 74, 470 62"/>
+                </g>
+                <circle cx="470" cy="62" r="6" fill="var(--accent-2)"/>
+                <circle cx="320" cy="104" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2"/>
+                <circle cx="190" cy="148" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2"/>
+                <g font-family="JetBrains Mono, monospace" font-size="10" fill="var(--text-faint)">
+                  <text x="44" y="232">deterministic market analysis → evidence → grounded advisory</text>
+                </g>
+                <g transform="translate(382 150)">
+                  <rect x="0" y="0" width="128" height="30" rx="8" fill="var(--surface)" stroke="var(--border-strong)"/>
+                  <text x="12" y="19" font-family="JetBrains Mono, monospace" font-size="10.5" fill="var(--text-muted)">llm: advisor only</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="chip chip-accent">Real-world systems</span>
+                <span class="chip chip-muted">In active development</span>
+              </div>
+              <h3 class="project-title" id="p-vriddhi-title">VRIDDHI</h3>
+              <p class="project-desc">
+                An AI-driven hyper-local business advisory and financial structuring system for rural
+                micro-entrepreneurs. The architecture keeps a hard boundary: market intelligence,
+                reach estimation and opportunity scoring are <strong>deterministic, code-driven stages</strong> —
+                the LLM is not the market-analysis engine. Only after the evidence package is assembled
+                does a single LLM call produce plain-language advisory, which a hermetic validation layer
+                checks against that evidence (invented values, contradictions, coverage) before anything
+                is displayed. A parallel RAG pipeline answers government-scheme questions with retrieval-grounded,
+                validated responses, backed by deterministic financial and risk engines.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>FastAPI</li>
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>Supabase</li>
+                <li>ChromaDB</li>
+                <li>Gemini</li>
+                <li>pytest</li>
+              </ul>
+              <div class="project-links">
+                <span class="chip chip-soft" title="Repository access is currently restricted">Private repository</span>
+                <span class="chip chip-soft" title="No public demo available">No live demo</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Liveliness AI -->
+          <article class="project-card reveal" aria-labelledby="p-liveliness-title">
+            <div class="project-visual" aria-hidden="true">
+              <svg viewBox="0 0 560 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-svg">
+                <!-- head outline -->
+                <path d="M280 36 C 218 36, 180 84, 180 138 C 180 194, 222 216, 280 216 C 338 216, 380 194, 380 138 C 380 84, 342 36, 280 36 Z"
+                      stroke="var(--accent)" stroke-width="1.8" fill="var(--surface)" fill-opacity="0.5"/>
+                <!-- landmarks -->
+                <g fill="var(--accent-2)">
+                  <circle cx="240" cy="112" r="3.4"/><circle cx="320" cy="112" r="3.4"/>
+                  <circle cx="280" cy="140" r="3.4"/><circle cx="252" cy="172" r="3.4"/>
+                  <circle cx="280" cy="180" r="3.4"/><circle cx="308" cy="172" r="3.4"/>
+                  <circle cx="222" cy="150" r="3.4"/><circle cx="338" cy="150" r="3.4"/>
+                  <circle cx="280" cy="70" r="3.4"/><circle cx="206" cy="120" r="3.4"/>
+                  <circle cx="354" cy="120" r="3.4"/><circle cx="232" cy="196" r="3.4"/>
+                  <circle cx="328" cy="196" r="3.4"/>
+                </g>
+                <!-- scan brackets -->
+                <g stroke="var(--accent-2)" stroke-width="2" fill="none" stroke-linecap="round">
+                  <path d="M140 84 V60 H164"/><path d="M420 84 V60 H396"/>
+                  <path d="M140 172 V196 H164"/><path d="M420 172 V196 H396"/>
+                </g>
+                <!-- pulse trace -->
+                <path d="M440 130 h26 l7 -14 l9 28 l7 -20 l6 6 h30" stroke="var(--accent)" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+                <g font-family="JetBrains Mono, monospace" font-size="10" fill="var(--text-faint)">
+                  <text x="44" y="34">landmarks → rPPG signal</text>
+                  <text x="416" y="170">snr check</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="chip chip-accent">Computer vision</span>
+                <span class="chip chip-muted">Working prototype</span>
+              </div>
+              <h3 class="project-title" id="p-liveliness-title">Liveliness Detection &amp; Face Verification System</h3>
+              <p class="project-desc">
+                A computer-vision system for face verification and spoof prevention. Facial landmarks
+                (MediaPipe) drive a remote-photoplethysmography check that extracts pulse signals from
+                forehead and cheek regions using the CHROM algorithm, rejecting static prints and
+                unstable footage through signal-strength and SNR thresholds. Image and video paths
+                combine error-level analysis, LBP/geometry forensics and a CNN classifier over
+                OpenCV-detected faces, with per-path results fused into a single verdict behind a
+                FastAPI service and a Streamlit forensic dashboard.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>Python</li>
+                <li>OpenCV</li>
+                <li>MediaPipe</li>
+                <li>SciPy</li>
+                <li>FastAPI</li>
+                <li>Streamlit</li>
+              </ul>
+              <div class="project-links">
+                <a class="btn btn-sm btn-primary" href="https://github.com/Soumitra-04/Liveliness-AI" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+                <span class="chip chip-soft" title="Runs locally — no public deployment">Runs locally</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ============ MORE PROJECTS ============ -->
+        <header class="subhead reveal">
+          <h3 class="subhead-title">More Projects</h3>
+          <p class="section-sub">Smaller builds and experiments worth a look.</p>
+        </header>
+
+        <div class="more-grid">
+          <article class="mini-card reveal">
+            <div class="mini-head">
+              <h4 class="mini-title">Study Buddy</h4>
+              <span class="chip chip-soft chip-sm">Local project</span>
+            </div>
+            <p class="mini-desc">LLM-based learning assistant that explains concepts at a chosen difficulty, generates summaries and flashcards, quizzing the user with 2–3 conceptual questions — with conversation history handled by a LangGraph checkpointer.</p>
+            <ul class="tag-list tag-sm" aria-label="Technologies used">
+              <li>Python</li><li>LangChain</li><li>LangGraph</li><li>Gemini</li>
+            </ul>
+          </article>
+
+          <article class="mini-card reveal">
+            <div class="mini-head">
+              <h4 class="mini-title">VeriScope-ai</h4>
+              <a class="mini-link" href="https://github.com/Soumitra-04/VeriScope-ai" target="_blank" rel="noopener noreferrer" aria-label="VeriScope-ai on GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+            </div>
+            <p class="mini-desc">Multi-agent system that verifies claims using real-time web search, structured reasoning, and confidence scoring.</p>
+            <ul class="tag-list tag-sm" aria-label="Technologies used">
+              <li>Python</li><li>LLM agents</li><li>Web search</li>
+            </ul>
+          </article>
+
+          <article class="mini-card reveal">
+            <div class="mini-head">
+              <h4 class="mini-title">CLI-Agent</h4>
+              <a class="mini-link" href="https://github.com/Soumitra-04/CLI-AGENT" target="_blank" rel="noopener noreferrer" aria-label="CLI-AGENT on GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+            </div>
+            <p class="mini-desc">A modular AI-powered CLI assistant capable of note-taking, WhatsApp automation, and intelligent responses using LLMs.</p>
+            <ul class="tag-list tag-sm" aria-label="Technologies used">
+              <li>Python</li><li>CLI</li><li>LLM tooling</li>
+            </ul>
+          </article>
+
+          <article class="mini-card reveal">
+            <div class="mini-head">
+              <h4 class="mini-title">Expense Tracker</h4>
+              <a class="mini-link" href="https://github.com/Soumitra-04/Expense-Tracker" target="_blank" rel="noopener noreferrer" aria-label="Expense-Tracker on GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+            </div>
+            <p class="mini-desc">Java Swing desktop application for tracking income and expenses, with model objects and file-based persistence.</p>
+            <ul class="tag-list tag-sm" aria-label="Technologies used">
+              <li>Java</li><li>Swing</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SKILLS ======================= -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">03 / Technical Skills</p>
+          <h2 class="section-title" id="skills-title">Tools I actually use.</h2>
+          <p class="section-sub">Grounded in coursework and shipped project code — not a wishlist.</p>
+        </header>
+
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-index" aria-hidden="true">01</span> Programming Languages</h3>
+            <ul class="skill-list">
+              <li>Python</li>
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-index" aria-hidden="true">02</span> AI &amp; Machine Learning</h3>
+            <ul class="skill-list">
+              <li>scikit-learn</li>
+              <li>PyTorch</li>
+              <li>pandas</li>
+              <li>NumPy</li>
+              <li>sentence-transformers</li>
+              <li>OpenCV</li>
+              <li>MediaPipe</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-index" aria-hidden="true">03</span> LLM Applications</h3>
+            <ul class="skill-list">
+              <li>LangChain</li>
+              <li>LangGraph</li>
+              <li>RAG pipelines</li>
+              <li>Gemini API</li>
+              <li>Groq</li>
+              <li>Prompt-injection defense</li>
+              <li>LLM evaluation</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-index" aria-hidden="true">04</span> Web Development</h3>
+            <ul class="skill-list">
+              <li>FastAPI</li>
+              <li>Next.js</li>
+              <li>React</li>
+              <li>Tailwind CSS</li>
+              <li>Vite</li>
+              <li>Streamlit</li>
+              <li>HTML &amp; CSS</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-index" aria-hidden="true">05</span> Databases</h3>
+            <ul class="skill-list">
+              <li>SQLite</li>
+              <li>PostgreSQL</li>
+              <li>Supabase</li>
+              <li>ChromaDB</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-index" aria-hidden="true">06</span> Developer Tools</h3>
+            <ul class="skill-list">
+              <li>Git &amp; GitHub</li>
+              <li>GitHub Actions</li>
+              <li>Docker</li>
+              <li>pytest</li>
+              <li>uv</li>
+              <li>Linux CLI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= RESEARCH & INNOVATION ======================= -->
+    <section class="section section-alt" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">04 / Research &amp; Innovation</p>
+          <h2 class="section-title" id="research-title">Questions worth measuring.</h2>
+          <p class="section-sub">Research work on model behaviour and network systems — with status stated honestly.</p>
+        </header>
+
+        <div class="research-grid">
+          <article class="research-card reveal">
+            <div class="project-meta">
+              <span class="chip chip-accent">Research project</span>
+              <span class="chip chip-muted">Ongoing</span>
+            </div>
+            <h3 class="research-title">SycAudit — auditing sycophancy in LLMs</h3>
+            <p class="research-desc">
+              A systematic methodology for measuring sycophancy: a frozen, five-facet annotation rubric;
+              an N×M prompt-framing grid for controlled response collection; and a trained facet grader
+              (MLP/XGBoost on sentence embeddings) evaluated on leakage-checked frozen splits. The
+              work contributes a reproducible evaluation framework and a full-stack auditing tool for
+              studying how model answers wobble with framing.
+            </p>
+            <ul class="tag-list tag-sm" aria-label="Research areas">
+              <li>LLM evaluation</li>
+              <li>Annotation methodology</li>
+              <li>Model behaviour</li>
+            </ul>
+          </article>
+
+          <article class="research-card reveal">
+            <div class="project-meta">
+              <span class="chip chip-violet">Proposed research</span>
+              <span class="chip chip-muted">In progress</span>
+            </div>
+            <h3 class="research-title">Trust-aware routing frameworks</h3>
+            <p class="research-desc">
+              Early-stage work exploring trust-aware coordination and routing for distributed AI
+              inference and network systems — how reliability, performance variability and trust
+              signals between peers can inform routing decisions. Currently at the literature-review
+              and framework-definition stage; no completed experiments to report yet.
+            </p>
+            <ul class="tag-list tag-sm" aria-label="Research areas">
+              <li>Distributed systems</li>
+              <li>Trust models</li>
+              <li>Network routing</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= GITHUB ======================= -->
+    <section class="section" id="github" aria-labelledby="github-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">05 / GitHub</p>
+          <h2 class="section-title" id="github-title">Code in the open.</h2>
+          <p class="section-sub">Selected public repositories — described exactly as they are.</p>
+        </header>
+
+        <div class="github-layout">
+          <a class="profile-card reveal" href="https://github.com/Soumitra-04" target="_blank" rel="noopener noreferrer">
+            <img class="profile-avatar" src="https://avatars.githubusercontent.com/u/132197820?s=160&amp;v=4" alt="Soumitra Rajguru's GitHub avatar" width="72" height="72" loading="lazy">
+            <div class="profile-info">
+              <p class="profile-name">Soumitra Rajguru</p>
+              <p class="profile-handle">@Soumitra-04</p>
+              <p class="profile-bio">Computer Engineering student · VIT Mumbai — building AI/ML systems and research tools.</p>
+            </div>
+            <span class="profile-cta">
+              View profile
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </span>
+          </a>
+
+          <ul class="repo-grid reveal">
+            <li>
+              <a class="repo-card" href="https://github.com/Soumitra-04/MultiAgent-Research-System" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  MultiAgent-Research-System
+                </span>
+                <span class="repo-desc">Multi-agent research &amp; verification pipeline with database-backed provenance.</span>
+                <span class="repo-lang"><span class="lang-dot" style="--lang:#3572A5"></span>Python</span>
+              </a>
+            </li>
+            <li>
+              <a class="repo-card" href="https://github.com/Soumitra-04/Liveliness-AI" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  Liveliness-AI
+                </span>
+                <span class="repo-desc">Face verification &amp; spoof prevention using facial movement and authentication checks.</span>
+                <span class="repo-lang"><span class="lang-dot" style="--lang:#3572A5"></span>Python</span>
+              </a>
+            </li>
+            <li>
+              <a class="repo-card" href="https://github.com/Soumitra-04/VeriScope-ai" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  VeriScope-ai
+                </span>
+                <span class="repo-desc">Multi-agent claim verification with web search, structured reasoning &amp; confidence scoring.</span>
+                <span class="repo-lang"><span class="lang-dot" style="--lang:#3572A5"></span>Python</span>
+              </a>
+            </li>
+            <li>
+              <a class="repo-card" href="https://github.com/Soumitra-04/CLI-AGENT" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  CLI-AGENT
+                </span>
+                <span class="repo-desc">Modular AI CLI assistant — notes, WhatsApp automation, LLM responses.</span>
+                <span class="repo-lang"><span class="lang-dot" style="--lang:#3572A5"></span>Python</span>
+              </a>
+            </li>
+            <li>
+              <a class="repo-card" href="https://github.com/Soumitra-04/Expense-Tracker" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  Expense-Tracker
+                </span>
+                <span class="repo-desc">Java expense tracker project.</span>
+                <span class="repo-lang"><span class="lang-dot" style="--lang:#b07219"></span>Java</span>
+              </a>
+            </li>
+            <li>
+              <a class="repo-card" href="https://github.com/Soumitra-04/AI_hackathon" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  AI_hackathon
+                </span>
+                <span class="repo-desc">Build for the TCS AI Hackathon.</span>
+                <span class="repo-lang"><span class="lang-dot" style="--lang:#3572A5"></span>Python</span>
+              </a>
+            </li>
+            <li>
+              <a class="repo-card" href="https://github.com/Soumitra-04/Pathway-GEN-AI" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  Pathway-GEN-AI
+                </span>
+                <span class="repo-desc">Pathway Gen AI prototype building.</span>
+                <span class="repo-lang"><span class="lang-dot" style="--lang:#3178c6"></span>TypeScript</span>
+              </a>
+            </li>
+            <li>
+              <a class="repo-card" href="https://github.com/Soumitra-04/capstone" target="_blank" rel="noopener noreferrer">
+                <span class="repo-name">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  capstone
+                </span>
+                <span class="repo-desc">L&amp;T DevOps capstone project.</span>
+                <span class="repo-lang"><span class="lang-dot" style="--lang:#3572A5"></span>Python</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CONTACT ======================= -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">06 / Contact</p>
+          <h2 class="section-title" id="contact-title">Let's build something.</h2>
+          <p class="section-sub">Open to internships, research collaborations, and interesting engineering problems.</p>
+        </header>
+
+        <div class="contact-grid reveal">
+          <a class="contact-card" href="mailto:soumitrarajguru1@gmail.com">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">soumitrarajguru1@gmail.com</span>
+            <svg class="contact-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <a class="contact-card" href="https://github.com/Soumitra-04" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/Soumitra-04</span>
+            <svg class="contact-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <a class="contact-card contact-card-pending" href="www.linkedin.com/in/soumitra-rajguru" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">LinkedIn <span class="pending-tag">link to update</span></span>
+            <span class="contact-value">linkedin.com/in/…</span>
+            <svg class="contact-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© <span id="year">2026</span> Soumitra Rajguru. Built with HTML, CSS &amp; vanilla JavaScript.</p>
+      <a class="footer-top" href="#top">
+        Back to top
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
