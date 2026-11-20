@@ -1,0 +1,52 @@
+---
+---
+<section class="section py-20 md:py-28 lg:py-32 bg-slate-800/30 border-y border-slate-800" id="research" aria-labelledby="research-title">
+	<div class="container mx-auto px-6">
+		<header class="section-head reveal mb-12 md:mb-16">
+			<p class="eyebrow font-mono text-xs font-medium tracking-widest uppercase text-blue-400 mb-3">04 / Research & Innovation</p>
+			<h2 class="section-title text-3xl md:text-4xl lg:text-5xl font-bold max-w-[24ch]">Questions worth measuring.</h2>
+			<p class="section-sub mt-3 max-w-2xl text-slate-400">Research work on model behaviour and network systems — with status stated honestly.</p>
+		</header>
+
+		<div class="research-grid grid md:grid-cols-2 gap-6">
+			<article class="research-card reveal flex flex-col gap-4 bg-slate-800/50 border border-slate-700 rounded-2xl p-6 md:p-8 transition-all duration-250 hover:-translate-y-1 hover:border-blue-500/30">
+				<div class="project-meta flex flex-wrap gap-2">
+					<span class="chip chip-accent px-3 py-1 rounded-full text-xs font-mono font-medium text-blue-400 border border-blue-500/40 bg-blue-500/10">Research project</span>
+					<span class="chip chip-muted px-3 py-1 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50">Ongoing</span>
+				</div>
+				<h3 class="research-title text-xl md:text-2xl font-bold">SycAudit — auditing sycophancy in LLMs</h3>
+				<p class="research-desc text-slate-300 text-base leading-relaxed flex-1">
+					A systematic methodology for measuring sycophancy: a frozen, five-facet annotation rubric;
+					an N×M prompt-framing grid for controlled response collection; and a trained facet grader
+					(MLP/XGBoost on sentence embeddings) evaluated on leakage-checked frozen splits. The
+					work contributes a reproducible evaluation framework and a full-stack auditing tool for
+					studying how model answers wobble with framing.
+				</p>
+				<ul class="tag-list tag-sm flex flex-wrap gap-1.5" aria-label="Research areas">
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">LLM evaluation</li>
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Annotation methodology</li>
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Model behaviour</li>
+				</ul>
+			</article>
+
+			<article class="research-card reveal flex flex-col gap-4 bg-slate-800/50 border border-slate-700 rounded-2xl p-6 md:p-8 transition-all duration-250 hover:-translate-y-1 hover:border-purple-500/30">
+				<div class="project-meta flex flex-wrap gap-2">
+					<span class="chip chip-violet px-3 py-1 rounded-full text-xs font-mono font-medium text-purple-400 border border-purple-500/40 bg-purple-500/10">Proposed research</span>
+					<span class="chip chip-muted px-3 py-1 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50">In progress</span>
+				</div>
+				<h3 class="research-title text-xl md:text-2xl font-bold">Trust-aware routing frameworks</h3>
+				<p class="research-desc text-slate-300 text-base leading-relaxed flex-1">
+					Early-stage work exploring trust-aware coordination and routing for distributed AI
+					inference and network systems — how reliability, performance variability and trust
+					signals between peers can inform routing decisions. Currently at the literature-review
+					and framework-definition stage; no completed experiments to report yet.
+				</p>
+				<ul class="tag-list tag-sm flex flex-wrap gap-1.5" aria-label="Research areas">
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-purple-500/40 hover:text-white transition-colors">Distributed systems</li>
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-purple-500/40 hover:text-white transition-colors">Trust models</li>
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-purple-500/40 hover:text-white transition-colors">Network routing</li>
+				</ul>
+			</article>
+		</div>
+	</div>
+</section>

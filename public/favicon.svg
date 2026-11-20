@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0a0b0f"/>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="12" fill="none" stroke="#2b3140" stroke-width="2"/>
+  <text x="32" y="41" font-family="Consolas, 'JetBrains Mono', monospace" font-size="26" font-weight="bold" fill="#4cc2ff" text-anchor="middle">SR</text>
+  <rect x="16" y="47" width="32" height="3" rx="1.5" fill="#8b7cf6"/>
+</svg>

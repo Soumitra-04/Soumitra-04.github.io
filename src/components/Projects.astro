@@ -1,0 +1,315 @@
+---
+---
+<section class="section py-20 md:py-28 lg:py-32 bg-slate-800/30 border-y border-slate-800" id="projects" aria-labelledby="projects-title">
+	<div class="container mx-auto px-6">
+		<header class="section-head reveal mb-12 md:mb-16">
+			<p class="eyebrow font-mono text-xs font-medium tracking-widest uppercase text-blue-400 mb-3">02 / Featured Projects</p>
+			<h2 class="section-title text-3xl md:text-4xl lg:text-5xl font-bold max-w-[24ch]">Systems I've designed and shipped.</h2>
+			<p class="section-sub mt-3 max-w-2xl text-slate-400">Four flagship builds — a research pipeline, an evaluation study, a real-world advisory platform, and a verification tool.</p>
+		</header>
+
+		<div class="project-list grid md:grid-cols-2 gap-7 reveal">
+			<article class="project-card group flex flex-col bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-[0_18px_40px_-22px_rgba(0,0,0,0.65)]" aria-labelledby="p-veritas-title">
+				<div class="project-visual bg-slate-900/50 border-b border-slate-700 p-5 md:p-6 flex items-center justify-center" aria-hidden="true">
+					<svg class="w-full h-auto max-w-xs" viewBox="0 0 560 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g stroke="rgba(148, 163, 184, 0.28)" stroke-width="1">
+							<path d="M40 40 H520 M40 80 H520 M40 120 H520 M40 160 H520 M40 200 H520" opacity="0.35"/>
+						</g>
+						<g stroke="#4cc2ff" stroke-width="1.6" fill="none">
+							<path d="M80 120 C 150 120, 150 60, 220 60"/>
+							<path d="M80 120 C 150 120, 150 180, 220 180"/>
+							<path d="M220 60 C 300 60, 300 120, 380 120"/>
+							<path d="M220 180 C 300 180, 300 120, 380 120"/>
+							<path d="M380 120 H 470"/>
+						</g>
+						<g font-family="JetBrains Mono, monospace" font-size="11" fill="#a3abbd">
+							<rect x="30" y="104" width="96" height="32" rx="8" fill="#171a23" stroke="rgba(148, 163, 184, 0.28)"/>
+							<text x="44" y="124">decompose</text>
+							<rect x="176" y="44" width="96" height="32" rx="8" fill="#171a23" stroke="rgba(148, 163, 184, 0.28)"/>
+							<text x="196" y="64">gather</text>
+							<rect x="176" y="164" width="96" height="32" rx="8" fill="#171a23" stroke="rgba(148, 163, 184, 0.28)"/>
+							<text x="190" y="184">prioritize</text>
+							<rect x="332" y="104" width="96" height="32" rx="8" fill="#171a23" stroke="#4cc2ff"/>
+							<text x="349" y="124" fill="#4cc2ff">verify</text>
+							<circle cx="470" cy="120" r="14" fill="#171a23" stroke="#4cc2ff" stroke-width="1.6"/>
+							<path d="M464 120.5 468 124.5 476 115.5" stroke="#4cc2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</g>
+						<g font-family="JetBrains Mono, monospace" font-size="10" fill="#7d8699">
+							<text x="410" y="150">cited synthesis</text>
+							<text x="42" y="222">sqlite · provenance · risk gate</text>
+						</g>
+					</svg>
+				</div>
+
+				<div class="project-body flex flex-col gap-4 p-5 md:p-6 flex-1">
+					<div class="project-meta flex flex-wrap gap-2">
+						<span class="chip chip-accent px-3 py-1 rounded-full text-xs font-mono font-medium text-blue-400 border border-blue-500/40 bg-blue-500/10">Research systems</span>
+						<span class="chip chip-muted px-3 py-1 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50">In active development</span>
+					</div>
+					<h3 class="project-title text-xl md:text-2xl font-bold" id="p-veritas-title">Veritas <span class="project-subtitle text-base font-medium text-slate-400">— Multi-Agent Research & Verification System</span></h3>
+					<p class="project-desc text-slate-300 text-base leading-relaxed">
+						An AI-driven multi-agent research system built around a database-backed pipeline:
+						task decomposition, source-prioritized evidence gathering, claim verification with explicit
+						verification states, contradiction analysis, and citation-backed synthesis. Engineering
+						highlights include a 10-step input-validation gate with prompt-injection detection,
+						language detection and composite risk scoring; a trained claim classifier
+						(TF-IDF + logistic regression with a rule-based engine) that decides claim type and
+						researchability before work enters the pipeline; and SQLite-tracked provenance —
+						source URL, domain and type — across tasks, sessions, verifications and contradictions.
+					</p>
+					<ul class="tag-list flex flex-wrap gap-2" aria-label="Technologies used">
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Python</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">SQLite</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Pydantic</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">scikit-learn</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">loguru</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">langdetect</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Research APIs</li>
+					</ul>
+					<div class="project-links flex flex-wrap items-center gap-3 mt-1">
+						<a class="btn btn-sm btn-primary px-4 py-2 rounded-lg font-medium text-sm" href="https://github.com/Soumitra-04/MultiAgent-Research-System" target="_blank" rel="noopener noreferrer">
+							GitHub
+							<svg class="w-4 h-4 inline-block ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+						</a>
+						<span class="chip chip-soft px-3 py-1 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50" title="No live deployment yet">No live demo</span>
+					</div>
+				</div>
+			</article>
+
+			<article class="project-card group flex flex-col bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-[0_18px_40px_-22px_rgba(0,0,0,0.65)]" aria-labelledby="p-sycaudit-title">
+				<div class="project-visual bg-slate-900/50 border-b border-slate-700 p-5 md:p-6 flex items-center justify-center" aria-hidden="true">
+					<svg class="w-full h-auto max-w-xs" viewBox="0 0 560 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g stroke="rgba(148, 163, 184, 0.28)" stroke-width="1">
+							<path d="M60 40 V200 M60 200 H510"/>
+							<path d="M60 160 H510" opacity="0.5"/>
+							<path d="M60 120 H510" opacity="0.5"/>
+							<path d="M60 80 H510" opacity="0.5"/>
+						</g>
+						<g font-family="JetBrains Mono, monospace" font-size="10" fill="#7d8699">
+							<text x="30" y="84">2</text><text x="30" y="124">1</text><text x="34" y="164">0</text>
+						</g>
+						<g>
+							<rect x="100" y="130" width="52" height="70" rx="4" fill="#4cc2ff" opacity="0.85"/>
+							<rect x="186" y="96" width="52" height="104" rx="4" fill="#8b7cf6" opacity="0.85"/>
+							<rect x="272" y="146" width="52" height="54" rx="4" fill="#4cc2ff" opacity="0.55"/>
+							<rect x="358" y="112" width="52" height="88" rx="4" fill="#8b7cf6" opacity="0.6"/>
+							<rect x="444" y="158" width="52" height="42" rx="4" fill="#4cc2ff" opacity="0.45"/>
+						</g>
+						<g font-family="JetBrains Mono, monospace" font-size="10" fill="#a3abbd" text-anchor="middle">
+							<text x="126" y="218">F1</text><text x="212" y="218">F2</text><text x="298" y="218">F3</text><text x="384" y="218">F4</text><text x="470" y="218">F5</text>
+						</g>
+						<text x="60" y="28" font-family="JetBrains Mono, monospace" font-size="11" fill="#7d8699">facet scores · 0–2 rubric</text>
+					</svg>
+				</div>
+
+				<div class="project-body flex flex-col gap-4 p-5 md:p-6 flex-1">
+					<div class="project-meta flex flex-wrap gap-2">
+						<span class="chip chip-accent px-3 py-1 rounded-full text-xs font-mono font-medium text-blue-400 border border-blue-500/40 bg-blue-500/10">Research project</span>
+						<span class="chip chip-muted px-3 py-1 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50">Ongoing</span>
+					</div>
+					<h3 class="project-title text-xl md:text-2xl font-bold" id="p-sycaudit-title">SycAudit</h3>
+					<p class="project-desc text-slate-300 text-base leading-relaxed">
+						A research project auditing and evaluating sycophancy in AI systems. Responses are
+						generated across an N×M grid of prompt framings, annotated under a frozen five-facet
+						rubric — excessive agreement, flattery, avoidance of disagreement, preference alignment
+						and unnecessary validation — and scored by an in-house ML grader (MLP and XGBoost over
+						BGE/GTE sentence embeddings) trained on a leakage-checked annotated corpus with frozen
+						splits. A full-stack application (FastAPI + React + PostgreSQL) computes a per-response
+						WOBBLE score and surfaces the least-sycophantic answer alongside its facet breakdown.
+					</p>
+					<ul class="tag-list flex flex-wrap gap-2" aria-label="Technologies used">
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">FastAPI</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">React</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">PostgreSQL</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">PyTorch</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">XGBoost</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">sentence-transformers</li>
+					</ul>
+					<div class="project-links flex flex-wrap items-center gap-3 mt-1">
+						<span class="chip chip-soft px-3 py-1 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50" title="Repository access is currently restricted">Private repository</span>
+						<span class="chip chip-soft px-3 py-1 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50" title="No public demo available">No live demo</span>
+					</div>
+				</div>
+			</article>
+
+			<article class="project-card group flex flex-col bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/40 hover:shadow-[0_18px_40px_-22px_rgba(0,0,0,0.65)]" aria-labelledby="p-vriddhi-title">
+				<div class="project-visual bg-slate-900/50 border-b border-slate-700 p-5 md:p-6 flex items-center justify-center" aria-hidden="true">
+					<svg class="w-full h-auto max-w-xs" viewBox="0 0 560 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g stroke="rgba(148, 163, 184, 0.28)" stroke-width="1" opacity="0.6">
+							<path d="M40 60 H520 M40 110 H520 M40 160 H520 M40 210 H520"/>
+							<path d="M100 40 V220 M200 40 V220 M300 40 V220 M400 40 V220 M500 40 V220"/>
+						</g>
+						<g stroke="#8b7cf6" stroke-width="1.6" fill="none">
+							<path d="M70 190 C 130 190, 140 150, 190 148 C 250 146, 260 110, 320 104 C 380 98, 400 74, 470 62"/>
+						</g>
+						<circle cx="470" cy="62" r="6" fill="#8b7cf6"/>
+						<circle cx="320" cy="104" r="4.5" fill="#0a0b0f" stroke="#4cc2ff" stroke-width="2"/>
+						<circle cx="190" cy="148" r="4.5" fill="#0a0b0f" stroke="#4cc2ff" stroke-width="2"/>
+						<g font-family="JetBrains Mono, monospace" font-size="10" fill="#7d8699">
+							<text x="44" y="232">deterministic market analysis → evidence → grounded advisory</text>
+						</g>
+						<g transform="translate(382 150)">
+							<rect x="0" y="0" width="128" height="30" rx="8" fill="#12141b" stroke="rgba(148, 163, 184, 0.28)"/>
+							<text x="12" y="19" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#a3abbd">llm: advisor only</text>
+						</g>
+					</svg>
+				</div>
+
+				<div class="project-body flex flex-col gap-4 p-5 md:p-6 flex-1">
+					<div class="project-meta flex flex-wrap gap-2">
+						<span class="chip chip-accent px-3 py-1 rounded-full text-xs font-mono font-medium text-blue-400 border border-blue-500/40 bg-blue-500/10">Real-world systems</span>
+						<span class="chip chip-muted px-3 py-1 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50">In active development</span>
+					</div>
+					<h3 class="project-title text-xl md:text-2xl font-bold" id="p-vriddhi-title">VRIDDHI</h3>
+					<p class="project-desc text-slate-300 text-base leading-relaxed">
+						An AI-driven hyper-local business advisory and financial structuring system for rural
+						micro-entrepreneurs. The architecture keeps a hard boundary: market intelligence,
+						reach estimation and opportunity scoring are <strong>deterministic, code-driven stages</strong> —
+						the LLM is not the market-analysis engine. Only after the evidence package is assembled
+						does a single LLM call produce plain-language advisory, which a hermetic validation layer
+						checks against that evidence (invented values, contradictions, coverage) before anything
+						is displayed. A parallel RAG pipeline answers government-scheme questions with retrieval-grounded,
+						validated responses, backed by deterministic financial and risk engines.
+					</p>
+					<ul class="tag-list flex flex-wrap gap-2" aria-label="Technologies used">
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-purple-500/40 hover:text-white transition-colors">FastAPI</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-purple-500/40 hover:text-white transition-colors">Next.js</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-purple-500/40 hover:text-white transition-colors">TypeScript</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-purple-500/40 hover:text-white transition-colors">Supabase</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-purple-500/40 hover:text-white transition-colors">ChromaDB</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-purple-500/40 hover:text-white transition-colors">Gemini</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-purple-500/40 hover:text-white transition-colors">pytest</li>
+					</ul>
+					<div class="project-links flex flex-wrap items-center gap-3 mt-1">
+						<span class="chip chip-soft px-3 py-1 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50" title="Repository access is currently restricted">Private repository</span>
+						<span class="chip chip-soft px-3 py-1 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50" title="No public demo available">No live demo</span>
+					</div>
+				</div>
+			</article>
+
+			<article class="project-card group flex flex-col bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-[0_18px_40px_-22px_rgba(0,0,0,0.65)]" aria-labelledby="p-liveliness-title">
+				<div class="project-visual bg-slate-900/50 border-b border-slate-700 p-5 md:p-6 flex items-center justify-center" aria-hidden="true">
+					<svg class="w-full h-auto max-w-xs" viewBox="0 0 560 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M280 36 C 218 36, 180 84, 180 138 C 180 194, 222 216, 280 216 C 338 216, 380 194, 380 138 C 380 84, 342 36, 280 36 Z"
+							stroke="#4cc2ff" stroke-width="1.8" fill="#12141b" fill-opacity="0.5"/>
+						<g fill="#8b7cf6">
+							<circle cx="240" cy="112" r="3.4"/><circle cx="320" cy="112" r="3.4"/>
+							<circle cx="280" cy="140" r="3.4"/><circle cx="252" cy="172" r="3.4"/>
+							<circle cx="280" cy="180" r="3.4"/><circle cx="308" cy="172" r="3.4"/>
+							<circle cx="222" cy="150" r="3.4"/><circle cx="338" cy="150" r="3.4"/>
+							<circle cx="280" cy="70" r="3.4"/><circle cx="206" cy="120" r="3.4"/>
+							<circle cx="354" cy="120" r="3.4"/><circle cx="232" cy="196" r="3.4"/>
+							<circle cx="328" cy="196" r="3.4"/>
+						</g>
+						<g stroke="#8b7cf6" stroke-width="2" fill="none" stroke-linecap="round">
+							<path d="M140 84 V60 H164"/><path d="M420 84 V60 H396"/>
+							<path d="M140 172 V196 H164"/><path d="M420 172 V196 H396"/>
+						</g>
+						<path d="M440 130 h26 l7 -14 l9 28 l7 -20 l6 6 h30" stroke="#4cc2ff" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+						<g font-family="JetBrains Mono, monospace" font-size="10" fill="#7d8699">
+							<text x="44" y="34">landmarks → rPPG signal</text>
+							<text x="416" y="170">snr check</text>
+						</g>
+					</svg>
+				</div>
+
+				<div class="project-body flex flex-col gap-4 p-5 md:p-6 flex-1">
+					<div class="project-meta flex flex-wrap gap-2">
+						<span class="chip chip-accent px-3 py-1 rounded-full text-xs font-mono font-medium text-blue-400 border border-blue-500/40 bg-blue-500/10">Computer vision</span>
+						<span class="chip chip-muted px-3 py-1 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50">Working prototype</span>
+					</div>
+					<h3 class="project-title text-xl md:text-2xl font-bold" id="p-liveliness-title">Liveliness Detection & Face Verification System</h3>
+					<p class="project-desc text-slate-300 text-base leading-relaxed">
+						A computer-vision system for face verification and spoof prevention. Facial landmarks
+						(MediaPipe) drive a remote-photoplethysmography check that extracts pulse signals from
+						forehead and cheek regions using the CHROM algorithm, rejecting static prints and
+						unstable footage through signal-strength and SNR thresholds. Image and video paths
+						combine error-level analysis, LBP/geometry forensics and a CNN classifier over
+						OpenCV-detected faces, with per-path results fused into a single verdict behind a
+						FastAPI service and a Streamlit forensic dashboard.
+					</p>
+					<ul class="tag-list flex flex-wrap gap-2" aria-label="Technologies used">
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Python</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">OpenCV</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">MediaPipe</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">SciPy</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">FastAPI</li>
+						<li class="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Streamlit</li>
+					</ul>
+					<div class="project-links flex flex-wrap items-center gap-3 mt-1">
+						<a class="btn btn-sm btn-primary px-4 py-2 rounded-lg font-medium text-sm" href="https://github.com/Soumitra-04/Liveliness-AI" target="_blank" rel="noopener noreferrer">
+							GitHub
+							<svg class="w-4 h-4 inline-block ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+						</a>
+						<span class="chip chip-soft px-3 py-1 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50" title="Runs locally — no public deployment">Runs locally</span>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<header class="subhead reveal mt-16 md:mt-24 pt-10 md:pt-14 border-t border-slate-800">
+			<h3 class="subhead-title text-2xl md:text-3xl font-bold">More Projects</h3>
+			<p class="section-sub mt-2 text-slate-400">Smaller builds and experiments worth a look.</p>
+		</header>
+
+		<div class="more-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 reveal">
+			<article class="mini-card flex flex-col gap-3 bg-slate-800/50 border border-slate-700 rounded-xl p-5 transition-all duration-250 hover:-translate-y-1 hover:border-blue-500/30">
+				<div class="mini-head flex items-center justify-between gap-3">
+					<h4 class="mini-title font-semibold text-lg">Study Buddy</h4>
+					<span class="chip chip-soft px-2.5 py-0.5 rounded-full text-xs font-mono font-medium text-slate-400 border border-slate-600 bg-slate-700/50">Local project</span>
+				</div>
+				<p class="mini-desc text-slate-300 text-sm leading-relaxed flex-1">LLM-based learning assistant that explains concepts at a chosen difficulty, generates summaries and flashcards, quizzing the user with 2–3 conceptual questions — with conversation history handled by a LangGraph checkpointer.</p>
+				<ul class="tag-list tag-sm flex flex-wrap gap-1.5" aria-label="Technologies used">
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Python</li>
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">LangChain</li>
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">LangGraph</li>
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Gemini</li>
+				</ul>
+			</article>
+
+			<article class="mini-card flex flex-col gap-3 bg-slate-800/50 border border-slate-700 rounded-xl p-5 transition-all duration-250 hover:-translate-y-1 hover:border-blue-500/30">
+				<div class="mini-head flex items-center justify-between gap-3">
+					<h4 class="mini-title font-semibold text-lg">VeriScope-ai</h4>
+					<a class="mini-link grid place-items-center w-8 h-8 border border-slate-700 rounded-lg text-slate-400 hover:text-blue-400 hover:border-blue-400 transition-colors" href="https://github.com/Soumitra-04/VeriScope-ai" target="_blank" rel="noopener noreferrer" aria-label="VeriScope-ai on GitHub">
+						<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+					</a>
+				</div>
+				<p class="mini-desc text-slate-300 text-sm leading-relaxed flex-1">Multi-agent system that verifies claims using real-time web search, structured reasoning, and confidence scoring.</p>
+				<ul class="tag-list tag-sm flex flex-wrap gap-1.5" aria-label="Technologies used">
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Python</li>
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">LLM agents</li>
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Web search</li>
+				</ul>
+			</article>
+
+			<article class="mini-card flex flex-col gap-3 bg-slate-800/50 border border-slate-700 rounded-xl p-5 transition-all duration-250 hover:-translate-y-1 hover:border-blue-500/30">
+				<div class="mini-head flex items-center justify-between gap-3">
+					<h4 class="mini-title font-semibold text-lg">CLI-Agent</h4>
+					<a class="mini-link grid place-items-center w-8 h-8 border border-slate-700 rounded-lg text-slate-400 hover:text-blue-400 hover:border-blue-400 transition-colors" href="https://github.com/Soumitra-04/CLI-AGENT" target="_blank" rel="noopener noreferrer" aria-label="CLI-AGENT on GitHub">
+						<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+					</a>
+				</div>
+				<p class="mini-desc text-slate-300 text-sm leading-relaxed flex-1">A modular AI-powered CLI assistant capable of note-taking, WhatsApp automation, and intelligent responses using LLMs.</p>
+				<ul class="tag-list tag-sm flex flex-wrap gap-1.5" aria-label="Technologies used">
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Python</li>
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">CLI</li>
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">LLM tooling</li>
+				</ul>
+			</article>
+
+			<article class="mini-card flex flex-col gap-3 bg-slate-800/50 border border-slate-700 rounded-xl p-5 transition-all duration-250 hover:-translate-y-1 hover:border-blue-500/30">
+				<div class="mini-head flex items-center justify-between gap-3">
+					<h4 class="mini-title font-semibold text-lg">Expense Tracker</h4>
+					<a class="mini-link grid place-items-center w-8 h-8 border border-slate-700 rounded-lg text-slate-400 hover:text-blue-400 hover:border-blue-400 transition-colors" href="https://github.com/Soumitra-04/Expense-Tracker" target="_blank" rel="noopener noreferrer" aria-label="Expense-Tracker on GitHub">
+						<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+					</a>
+				</div>
+				<p class="mini-desc text-slate-300 text-sm leading-relaxed flex-1">Java Swing desktop application for tracking income and expenses, with model objects and file-based persistence.</p>
+				<ul class="tag-list tag-sm flex flex-wrap gap-1.5" aria-label="Technologies used">
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Java</li>
+					<li class="px-2.5 py-1 rounded border border-slate-700 bg-slate-800/50 font-mono text-xs text-slate-300 hover:border-blue-500/40 hover:text-white transition-colors">Swing</li>
+				</ul>
+			</article>
+		</div>
+	</div>
+</section>

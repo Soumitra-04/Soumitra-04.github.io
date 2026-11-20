@@ -1,0 +1,120 @@
+---
+---
+<header class="site-header sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800 transition-colors duration-300" id="site-header">
+	<div class="container mx-auto px-6">
+		<div class="flex items-center justify-between h-16">
+			<a class="brand flex items-center gap-3 text-white font-bold hover:opacity-80 transition-opacity" href="#top" aria-label="Soumitra Rajguru — home">
+				<span class="brand-mark grid place-items-center w-8 h-8 border border-slate-600 rounded-lg font-mono text-sm font-semibold text-blue-400 bg-slate-800 transition-colors">SR</span>
+				<span class="brand-name text-base md:text-lg">Soumitra<span class="text-blue-400">.</span></span>
+			</a>
+
+			<nav class="site-nav hidden md:flex items-center gap-1" id="site-nav" aria-label="Primary">
+				<a href="#about" class="nav-link px-3 py-2 rounded-lg text-slate-400 font-medium text-sm hover:text-white hover:bg-white/5 transition-colors">About</a>
+				<a href="#projects" class="nav-link px-3 py-2 rounded-lg text-slate-400 font-medium text-sm hover:text-white hover:bg-white/5 transition-colors">Projects</a>
+				<a href="#skills" class="nav-link px-3 py-2 rounded-lg text-slate-400 font-medium text-sm hover:text-white hover:bg-white/5 transition-colors">Skills</a>
+				<a href="#research" class="nav-link px-3 py-2 rounded-lg text-slate-400 font-medium text-sm hover:text-white hover:bg-white/5 transition-colors">Research</a>
+				<a href="#github" class="nav-link px-3 py-2 rounded-lg text-slate-400 font-medium text-sm hover:text-white hover:bg-white/5 transition-colors">GitHub</a>
+				<a href="#contact" class="nav-link px-3 py-2 rounded-lg text-slate-400 font-medium text-sm hover:text-white hover:bg-white/5 transition-colors">Contact</a>
+			</nav>
+
+			<div class="nav-actions flex items-center gap-2">
+				<button class="theme-toggle icon-btn p-2 border border-slate-700 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:border-slate-600 transition-colors" id="theme-toggle" type="button" aria-label="Toggle color theme">
+					<svg class="icon-moon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+					<svg class="icon-sun w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+				</button>
+				<button class="nav-toggle icon-btn p-2 border border-slate-700 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:border-slate-600 transition-colors md:hidden" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+					<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+					<svg class="icon-close w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+				</button>
+			</div>
+		</div>
+
+		<nav class="site-nav md:hidden absolute left-0 right-0 top-16 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 p-4 opacity-0 invisible transform -translate-y-2 transition-all duration-250" id="mobile-nav" aria-label="Mobile navigation">
+			<ul class="flex flex-col gap-1">
+				<li><a href="#about" class="nav-link px-4 py-3 rounded-lg text-slate-300 font-medium hover:text-white hover:bg-white/5 transition-colors">About</a></li>
+				<li><a href="#projects" class="nav-link px-4 py-3 rounded-lg text-slate-300 font-medium hover:text-white hover:bg-white/5 transition-colors">Projects</a></li>
+				<li><a href="#skills" class="nav-link px-4 py-3 rounded-lg text-slate-300 font-medium hover:text-white hover:bg-white/5 transition-colors">Skills</a></li>
+				<li><a href="#research" class="nav-link px-4 py-3 rounded-lg text-slate-300 font-medium hover:text-white hover:bg-white/5 transition-colors">Research</a></li>
+				<li><a href="#github" class="nav-link px-4 py-3 rounded-lg text-slate-300 font-medium hover:text-white hover:bg-white/5 transition-colors">GitHub</a></li>
+				<li><a href="#contact" class="nav-link px-4 py-3 rounded-lg text-slate-300 font-medium hover:text-white hover:bg-white/5 transition-colors">Contact</a></li>
+			</ul>
+		</nav>
+</header>
+
+<script>
+(function() {
+	const themeToggle = document.getElementById('theme-toggle');
+	const html = document.documentElement;
+	const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+	function applyTheme(theme) {
+		html.setAttribute('data-theme', theme);
+		if (themeMeta) themeMeta.setAttribute('content', theme === 'light' ? '#f6f7f9' : '#0a0b0f');
+		if (themeToggle) themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+	}
+
+	if (themeToggle) {
+		themeToggle.addEventListener('click', function() {
+			const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+			applyTheme(next);
+			try { localStorage.setItem('sr-theme', next); } catch (e) {}
+		});
+	}
+
+	const navToggle = document.getElementById('nav-toggle');
+	const mobileNav = document.getElementById('mobile-nav');
+
+	function setNav(open) {
+		if (!navToggle || !mobileNav) return;
+		navToggle.setAttribute('aria-expanded', String(open));
+		navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+		const iconClose = navToggle.querySelector('.icon-close');
+		const iconMenu = navToggle.querySelector('svg:not(.icon-close)');
+		if (iconClose) iconClose.classList.toggle('hidden', !open);
+		if (iconMenu) iconMenu.classList.toggle('hidden', open);
+		mobileNav.classList.toggle('opacity-0', !open);
+		mobileNav.classList.toggle('invisible', !open);
+		mobileNav.classList.toggle('-translate-y-2', !open);
+		document.body.classList.toggle('nav-open', open);
+	}
+
+	if (navToggle && mobileNav) {
+		navToggle.addEventListener('click', function() {
+			setNav(navToggle.getAttribute('aria-expanded') !== 'true');
+		});
+		mobileNav.addEventListener('click', function(event) {
+			if (event.target.closest('a')) setNav(false);
+		});
+		document.addEventListener('keydown', function(event) {
+			if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+				setNav(false);
+				navToggle.focus();
+			}
+		});
+		window.addEventListener('resize', function() {
+			if (window.innerWidth > 768) setNav(false);
+		});
+	}
+
+	const header = document.getElementById('site-header');
+	function onScroll() {
+		if (header) header.classList.toggle('border-slate-700', window.scrollY > 8);
+	}
+	onScroll();
+	window.addEventListener('scroll', onScroll, { passive: true });
+
+	const yearEl = document.getElementById('year');
+	if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+})();
+</script>
+
+<style>
+	html[data-theme='light'] .icon-moon { display: none; }
+	html[data-theme='dark'] .icon-sun { display: none; }
+	html[data-theme='light'] .icon-sun { display: block; }
+	html[data-theme='dark'] .icon-moon { display: block; }
+
+	.site-header.is-scrolled {
+		border-bottom-color: var(--border, rgba(148, 163, 184, 0.13));
+	}
+</style>
